@@ -65,6 +65,8 @@ jobs:
           node-version: "20"
       - name: Install dependencies
         run: npm ci
+      - name: Run tests and generate coverage
+        run: npm test
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         env:
@@ -75,3 +77,4 @@ jobs:
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.qualitygate.wait=true
             -Dsonar.qualitygate.timeout=600
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
