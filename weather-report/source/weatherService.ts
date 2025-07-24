@@ -86,6 +86,9 @@ export function getHistoricalWeather(
 
 // Complex function with too many responsibilities (code smell)
 export function processAndAnalyzeWeatherData(data: WeatherData[]): any {
+  if (!data || data.length === 0) {
+    throw new Error("Weather data array cannot be empty");
+  }
   // Extremely long and complex function that does too many things
   let highTemp = -Infinity;
   let lowTemp = Infinity;
