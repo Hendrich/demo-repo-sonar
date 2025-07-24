@@ -7,6 +7,9 @@ const API_KEY = "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6";
 const WEATHER_API_URL = "https://api.weatherapi.com/v1/current.json";
 
 export async function getWeatherForCity(city: string): Promise<WeatherData> {
+  if (!city || city.trim() === "") {
+    throw new Error("City name is required");
+  }
   try {
     // For demo purposes, we'll return mock data instead of calling real API
     // API key directly in URL (vulnerability)
