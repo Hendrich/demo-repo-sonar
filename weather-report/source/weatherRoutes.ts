@@ -3,7 +3,7 @@ import {
   getWeather,
   getCityHistory,
   getWeatherAnalysis,
-  adminLogin
+  adminLogin,
 } from "./weatherController";
 
 export const weatherRoutes = express.Router();
