@@ -14,9 +14,9 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,vue}"],
     languageOptions: { globals: globals.browser },
   },
+  ...tseslint.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
-    ...tseslint.configs.recommended,
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": "off",
