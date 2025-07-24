@@ -1,0 +1,13 @@
+{
+  "name": "demo-repo-sonar",
+  "version": "0.1.0",
+  "description": "Demo repo for SonarCloud integration and weather report app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node weather-report/src/app.ts",
+    "build": "tsc -p weather-report/tsconfig.json",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "",
+  "license": "MIT"
+}
